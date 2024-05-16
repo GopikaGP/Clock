@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="main">
+    <h1 id="result"></h1>
+
+   </div>
+</body>
+<script>
+    function getTime(){
+        let time = new Date()
+        console.log(time);
+
+        let hour = time.getHours()
+        console.log(hour)
+
+        let minute = time.getMinutes()
+        console.log(minute)
+
+        let seconds = time.getSeconds()
+        console.log(seconds)
+
+        result.innerHTML=`${hour}:${minute}:${seconds} ${hour>=12?'PM':'AM'}`
+
+        setTimeout(()=>{
+            getTime()
+        },1000)
+    }
+        
+      
+    getTime()
+
+</script>
+</html>
